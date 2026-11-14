@@ -1,0 +1,5 @@
+/* Única regla propia: que las 4 imágenes del carrusel tengan la misma altura */
+.carousel-item img {
+  height: 450px;
+  object-fit: cover;
+}

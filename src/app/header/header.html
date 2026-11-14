@@ -1,0 +1,24 @@
+<!-- Barra de navegación de Bootstrap (Components > Navbar) -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-secondary sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" routerLink="/home">
+      <img src="img/favicon.png" alt="Logo AutoFix" width="30" height="30" class="d-inline-block align-text-top">
+      AutoFix
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#menuPrincipal" aria-controls="menuPrincipal"
+            aria-expanded="false" aria-label="Mostrar menú">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="menuPrincipal">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" routerLink="/home" routerLinkActive="active">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/about" routerLinkActive="active">Nosotros</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/product" routerLinkActive="active">Servicios</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/contact" routerLinkActive="active">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>

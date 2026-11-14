@@ -1,0 +1,87 @@
+<div class="container my-5">
+  <h1 class="text-secondary">Agenda tu cita</h1>
+  <p class="lead">Completa el formulario y confirmaremos tu hora.</p>
+
+  @if (enviado) {
+    <div class="alert alert-success" role="alert">
+      ✅ ¡Solicitud recibida! Te confirmaremos tu cita pronto.
+    </div>
+  }
+
+  <div class="row g-4">
+    <!-- Formulario de Bootstrap (Forms > Overview) -->
+    <div class="col-lg-8">
+      <form (submit)="enviar($event)">
+
+        <div class="mb-3">
+          <label for="nombre" class="form-label">Nombre completo</label>
+          <input type="text" class="form-control" id="nombre" placeholder="Ej. María Pérez" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="correo" class="form-label">Correo electrónico</label>
+          <input type="email" class="form-control" id="correo" placeholder="correo@ejemplo.com" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="telefono" class="form-label">Teléfono</label>
+          <input type="tel" class="form-control" id="telefono" placeholder="987654321" pattern="[0-9]{9}" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="fecha" class="form-label">Fecha deseada</label>
+          <input type="date" class="form-control" id="fecha" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="opcion" class="form-label">Servicio</label>
+          <select class="form-select" id="opcion" required>
+            <option value="" selected disabled>Selecciona una opción</option>
+            <option value="aceite">Cambio de aceite</option>
+            <option value="frenos">Frenos y llantas</option>
+            <option value="diagnostico">Diagnóstico</option>
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <p class="mb-1">¿Cómo prefieres que te contactemos?</p>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="medio" id="medioCorreo" checked>
+            <label class="form-check-label" for="medioCorreo">Correo</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="medio" id="medioTelefono">
+            <label class="form-check-label" for="medioTelefono">Teléfono</label>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="mensaje" class="form-label">Mensaje</label>
+          <textarea class="form-control" id="mensaje" rows="4" placeholder="Indica marca, modelo y año de tu vehículo"></textarea>
+        </div>
+
+        <div class="form-check mb-3">
+          <input class="form-check-input" type="checkbox" id="acepta" required>
+          <label class="form-check-label" for="acepta">Acepto el tratamiento de mis datos personales</label>
+        </div>
+
+        <button type="submit" class="btn btn-secondary">Solicitar cita</button>
+      </form>
+    </div>
+
+    <!-- Datos de contacto -->
+    <div class="col-lg-4">
+      <div class="card bg-secondary text-white">
+        <div class="card-body">
+          <h4 class="card-title">Encuéntranos</h4>
+          <p>📍 Av. Colonial 890, Lima</p>
+          <p>📞 987 654 321</p>
+          <p>✉️ citas@autofix.pe</p>
+          <h5>Horario</h5>
+          <p class="mb-1">Lunes a viernes: 8:00 a. m. – 6:00 p. m.</p>
+          <p class="mb-0">Sábados: 8:00 a. m. – 1:00 p. m.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
